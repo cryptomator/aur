@@ -5,7 +5,7 @@
 
 pkgname=cryptomator
 pkgver=1.12.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Multiplatform transparent client-side encryption of your files in the cloud."
 arch=('any')
 url="https://cryptomator.org/"
@@ -41,7 +41,7 @@ build() {
 
   cd "${srcdir}/cryptomator-${pkgver}"
 
-  mvn -B clean package -DskipTests -Plinux
+  mvn -B clean package -Djavafx.platform=linux -DskipTests -Plinux
 
   cp LICENSE.txt target
   cp target/cryptomator-*.jar target/mods
