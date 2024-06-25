@@ -20,7 +20,7 @@ source_x86_64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/relea
 source_aarch64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.1%2B8/OpenJDK22U-jdk_aarch64_linux_hotspot_22.0.1_8.tar.gz"
                 "openjfx.zip::https://download2.gluonhq.com/openjfx/22.0.1/openjfx-22.0.1_linux-aarch64_bin-jmods.zip")
 noextract=('jdk.tar.gz' 'openjfx.zip')
-sha256sums=('bb38c45ac91c4bc521af0b08dd72cf965aba80cbf71b27afdc21fcef7dbbf567'
+sha256sums=('c8993c97d802fe214a62cf50a6c4dbcd331ea6429f3ac06111533cfce0bfd962'
             'SKIP')
 sha256sums_x86_64=('e59c6bf801cc023a1ea78eceb5e6756277f1564cd0a421ea984efe6cb96cfcf8'
                    'fbb22f35951c2e049cc2554dd03c2c56b4f5adc4b2ae9248872f46175ac103d8')
