@@ -17,9 +17,9 @@ _jdkver=22.0.2+9
 _jfxver=22.0.2
 source=("cryptomator-${pkgver//_/-}.tar.gz::https://github.com/cryptomator/cryptomator/archive/refs/tags/${pkgver//_/-}.tar.gz"
         "cryptomator-${pkgver//_/-}.tar.gz.asc::https://github.com/cryptomator/cryptomator/releases/download/${pkgver//_/-}/cryptomator-${pkgver//_/-}.tar.gz.asc")
-source_x86_64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/releases/download/jdk-${_jdkver//\+//%2B}/OpenJDK22U-jdk_x64_linux_hotspot_${_jdkver//\+/_}.tar.gz"
+source_x86_64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/releases/download/jdk-${_jdkver//\+/%2B}/OpenJDK22U-jdk_x64_linux_hotspot_${_jdkver//\+/_}.tar.gz"
                "openjfx.zip::https://download2.gluonhq.com/openjfx/${_jfxver}/openjfx-${_jfxver}_linux-x64_bin-jmods.zip")
-source_aarch64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/releases/download/jdk-${_jdkver//\+//%2B}/OpenJDK22U-jdk_aarch64_linux_hotspot_${_jdkver//\+/_}.tar.gz"
+source_aarch64=("jdk.tar.gz::https://github.com/adoptium/temurin22-binaries/releases/download/jdk-${_jdkver//\+/%2B}/OpenJDK22U-jdk_aarch64_linux_hotspot_${_jdkver//\+/_}.tar.gz"
                 "openjfx.zip::https://download2.gluonhq.com/openjfx/${_jfxver}/openjfx-${_jfxver}_linux-aarch64_bin-jmods.zip")
 noextract=('jdk.tar.gz' 'openjfx.zip')
 sha256sums=('c87a384acdb1f36adb92415e2d060110a8c0994dbcf8f664f511dc23ac086d12'
