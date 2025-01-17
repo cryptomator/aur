@@ -89,6 +89,7 @@ build() {
     --java-options "-Dcryptomator.buildNumber=\"aur-${pkgrel}\"" \
     --java-options "-Dcryptomator.appVersion=\"${pkgver//_/-}\"" \
     --java-options "-Dcryptomator.integrationsLinux.autoStartCmd=\"cryptomator\"" \
+    --java-options "-Dcryptomator.networking.truststore.p12Path=\"/etc/cryptomator/certs.p12\"" \
     --app-version "${pkgver//_*/}" \
     --verbose
 }
