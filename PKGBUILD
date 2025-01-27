@@ -71,7 +71,6 @@ build() {
     --dest . \
     --name cryptomator \
     --vendor "Skymatic GmbH" \
-    --java-options "--enable-preview" \
     --java-options '--enable-native-access=org.cryptomator.jfuse.linux.amd64,org.cryptomator.jfuse.linux.aarch64,org.purejava.appindicator' \
     --copyright "(C) 2016 - 2025 Skymatic GmbH" \
     --java-options "-Xss5m" \
