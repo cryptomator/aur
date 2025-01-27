@@ -5,7 +5,7 @@
 # Contributor: Armin Schrenk <armin.schrenk@skymatic.de>
 
 pkgname=cryptomator
-pkgver=1.15.0-beta1
+pkgver=1.15.0_beta1 #Note: hyphens (-) must be replaced by underscores (_)
 pkgrel=1
 pkgdesc="Multiplatform transparent client-side encryption of your files in the cloud."
 arch=('any')
