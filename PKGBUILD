@@ -35,12 +35,16 @@ validpgpkeys=('58117AFA1F85B3EEC154677D615D449FE6E6A235')
 
 build() {
   export JAVA_HOME="${srcdir}/jdk-${_jdkver}"
-  export JMODS_PATH="${srcdir}/jmods-${_jfxver}:${JAVA_HOME}/jmods"
+  JMODS_PATH="${srcdir}/openjfx-${_jfxver}-jmods"
+  #JEP 493
+  if ! $(${JAVA_HOME}/bin/jlink --help | grep -q "Linking from run-time image enabled"); then
+      JMODs_PATH="${JMODS_PATH}:${JAVA_HOME}/jmods:"
+  fi
 
   tar xfz "jdk-${_jdkver}.tar.gz"
 
-  mkdir "jmods-${_jfxver}"
-  unzip -j "openjfx-${_jfxver}.zip" \*/javafx.base.jmod \*/javafx.controls.jmod \*/javafx.fxml.jmod \*/javafx.graphics.jmod -d "jmods-${_jfxver}"
+  mkdir "openjfx-${_jfxver}-jmods"
+  unzip -j "openjfx-${_jfxver}.zip" \*/javafx.base.jmod \*/javafx.controls.jmod \*/javafx.fxml.jmod \*/javafx.graphics.jmod -d "openjfx-${_jfxver}-jmods"
 
   cd "${srcdir}/cryptomator-${pkgver//_/-}"
 
