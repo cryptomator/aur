@@ -14,7 +14,7 @@ license=('GPL3')
 depends=('fuse3' 'alsa-lib' 'hicolor-icon-theme' 'libxtst' 'libnet' 'libxrender')
 makedepends=('maven' 'unzip')
 optdepends=('keepassxc-cryptomator: Use KeePassXC to store vault passwords' 'ttf-hanazono: Install this font when using Japanese system language')
-_jdkver=23.0.2+7
+_jdkver=24.0.1+9
 _jfxver=23.0.2
 source=("cryptomator-${pkgver//_/-}.tar.gz::https://github.com/cryptomator/cryptomator/archive/refs/tags/${pkgver//_/-}.tar.gz"
         "cryptomator-${pkgver//_/-}.tar.gz.asc::https://github.com/cryptomator/cryptomator/releases/download/${pkgver//_/-}/cryptomator-${pkgver//_/-}.tar.gz.asc")
@@ -25,9 +25,9 @@ source_aarch64=("jdk-${_jdkver}.tar.gz::https://github.com/adoptium/temurin${_jd
 noextract=("jdk-${_jfxver}.tar.gz" "openjfx-${_jdkver}.zip")
 sha256sums=('4463fbb12f4101e4b6aebbc5fdbe9903ffebfe03050e0bbf9422769117dc1d32'
             'SKIP')
-sha256sums_x86_64=('870ac8c05c6fe563e7a3878a47d0234b83c050e83651d2c47e8b822ec74512dd'
+sha256sums_x86_64=('78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272'
                    '063baebc6922e4a89c94b9dfb7a4f53e59e8d6fec400d4e670b31bc2ab324dec')
-sha256sums_aarch64=('fb43ae1202402842559cb6223886ec1663b90ffbec48479abbcb92c92c9012eb'
+sha256sums_aarch64=('a598260e340028d9b2383c23df16aa286769a661bd3bf28a52e8c1a5774b1110'
                     '9bbedaeae1590b69e2b22237bda310936df33e344dbc243bea2e86acaab3a0d8')
 options=('!strip')
 
