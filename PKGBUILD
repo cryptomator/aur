@@ -22,7 +22,7 @@ source_x86_64=("jdk-${_jdkver}.tar.gz::https://github.com/adoptium/temurin${_jdk
                "openjfx-${_jfxver}.zip::https://download2.gluonhq.com/openjfx/${_jfxver}/openjfx-${_jfxver}_linux-x64_bin-jmods.zip")
 source_aarch64=("jdk-${_jdkver}.tar.gz::https://github.com/adoptium/temurin${_jdkver:0:2}-binaries/releases/download/jdk-${_jdkver//\+/%2B}/OpenJDK${_jdkver:0:2}U-jdk_aarch64_linux_hotspot_${_jdkver//\+/_}.tar.gz"
                 "openjfx-${_jfxver}.zip::https://download2.gluonhq.com/openjfx/${_jfxver}/openjfx-${_jfxver}_linux-aarch64_bin-jmods.zip")
-noextract=("jdk-${_jfxver}.tar.gz" "openjfx-${_jdkver}.zip")
+noextract=("jdk-${_jdkver}.tar.gz" "openjfx-${_jfxver}.zip")
 sha256sums=('4463fbb12f4101e4b6aebbc5fdbe9903ffebfe03050e0bbf9422769117dc1d32'
             'SKIP')
 sha256sums_x86_64=('78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272'
@@ -38,7 +38,7 @@ build() {
   JMODS_PATH="${srcdir}/openjfx-${_jfxver}-jmods"
   #JEP 493
   if ! $(${JAVA_HOME}/bin/jlink --help | grep -q "Linking from run-time image enabled"); then
-      JMODs_PATH="${JMODS_PATH}:${JAVA_HOME}/jmods:"
+      JMODS_PATH="${JMODS_PATH}:${JAVA_HOME}/jmods:"
   fi
 
   tar xfz "jdk-${_jdkver}.tar.gz"
