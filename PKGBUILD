@@ -75,8 +75,9 @@ build() {
     --dest . \
     --name cryptomator \
     --vendor "Skymatic GmbH" \
-    --java-options '--enable-native-access=org.cryptomator.jfuse.linux.amd64,org.cryptomator.jfuse.linux.aarch64,org.purejava.appindicator' \
     --copyright "(C) 2016 - 2025 Skymatic GmbH" \
+    --java-options '--enable-native-access=javafx.graphics,org.cryptomator.jfuse.linux.amd64,org.cryptomator.jfuse.linux.aarch64,org.purejava.appindicator' \
+    --java-options "--sun-misc-unsafe-memory-access=allow" \
     --java-options "-Xss5m" \
     --java-options "-Xmx256m" \
     --java-options "-Dfile.encoding=\"utf-8\"" \
