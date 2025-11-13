@@ -47,4 +47,3 @@ jobs:
           name: arch-package-${{ github.run_number }}
           path: |
             ${{ env.PKGDEST }}/*.pkg.tar.zst
-            *.log
